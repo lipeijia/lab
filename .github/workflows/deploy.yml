@@ -4,37 +4,28 @@ on:
   push:
     branches:
       - main
-    # Review gh actions docs if you want to further define triggers, paths, etc
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+  # Allow manual triggering
+  workflow_dispatch:
 
 jobs:
   build:
     name: Build Docusaurus
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
 
-      - name: Clear npm cache
-        run: npm cache clean --force
-      
       - name: Install dependencies
-        run: |
-          echo "Node version: $(node --version)"
-          echo "NPM version: $(npm --version)"
-          echo "Attempting npm ci..."
-          npm ci || {
-            echo "npm ci failed, trying npm install..."
-            echo "Removing package-lock.json and trying npm install..."
-            rm -f package-lock.json
-            npm install
-          }
-      
+        run: npm install
+
       - name: Build website
         run: npm run build
 
