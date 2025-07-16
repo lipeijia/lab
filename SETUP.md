@@ -93,6 +93,21 @@ npm run serve
 - Verify the workflow file is in `.github/workflows/deploy.yml`
 - Check the Actions tab for error messages
 
+### npm ci Failures
+If you encounter `npm ci` errors in GitHub Actions:
+
+1. **Node version mismatch**: The workflow uses Node v22 to match your local environment
+2. **Alternative workflow**: Use `.github/workflows/deploy-simple.yml` which uses `npm install` instead
+3. **Manual fix**: Delete and recreate `package-lock.json` with `rm package-lock.json && npm install`
+
+### Using the Alternative Workflow
+If the main workflow continues to fail, you can:
+
+1. Disable the main workflow:
+   - Rename `deploy.yml` to `deploy.yml.disabled`
+2. The `deploy-simple.yml` workflow will take over
+3. This uses `npm install` instead of `npm ci` (more reliable but slower)
+
 ## Next Steps
 
 1. Complete the GitHub setup above
