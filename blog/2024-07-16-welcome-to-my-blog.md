@@ -10,6 +10,8 @@ description: "Welcome to my new blog built with Docusaurus and Obsidian"
 
 Welcome to my new blog! This is my first post using the Docusaurus + Obsidian workflow.
 
+<!-- truncate -->
+
 ## About This Blog
 
 This blog is built using:

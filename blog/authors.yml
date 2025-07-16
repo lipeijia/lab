@@ -1,3 +1,12 @@
+lipeijia:
+  name: Lipeijia
+  title: Developer and Blog Author
+  url: https://github.com/lipeijia
+  image_url: https://github.com/lipeijia.png
+  page: true
+  socials:
+    github: lipeijia
+
 yangshun:
   name: Yangshun Tay
   title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd

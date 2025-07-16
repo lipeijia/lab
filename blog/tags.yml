@@ -1,3 +1,23 @@
+welcome:
+  label: Welcome
+  permalink: /welcome
+  description: Welcome posts and introductions
+
+introduction:
+  label: Introduction
+  permalink: /introduction
+  description: Introduction posts
+
+docusaurus:
+  label: Docusaurus
+  permalink: /docusaurus
+  description: Posts about Docusaurus
+
+obsidian:
+  label: Obsidian
+  permalink: /obsidian
+  description: Posts about Obsidian
+
 facebook:
   label: Facebook
   permalink: /facebook
@@ -7,11 +27,6 @@ hello:
   label: Hello
   permalink: /hello
   description: Hello tag description
-
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
 
 hola:
   label: Hola
