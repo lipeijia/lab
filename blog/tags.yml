@@ -18,17 +18,17 @@ obsidian:
   permalink: /obsidian
   description: Posts about Obsidian
 
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+technology:
+  label: Technology
+  permalink: /technology
+  description: Technology-related posts
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+development:
+  label: Development
+  permalink: /development
+  description: Software development posts
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+blog:
+  label: Blog
+  permalink: /blog
+  description: General blog posts
