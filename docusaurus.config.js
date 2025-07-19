@@ -62,8 +62,8 @@ const config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/lipeijia/my-blog/tree/main/',
+          editUrl:
+            'https://github.com/lipeijia/lab/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -133,7 +133,7 @@ const config = {
         //       },
         //       {
         //         label: 'GitHub',
-        //         href: 'https://github.com/lipeijia/my-blog',
+        //         href: 'https://github.com/lipeijia/lab',
         //       },
         //     ],
         //   },

@@ -1,6 +1,6 @@
-# My Blog
+# Pei Jia's Lab
 
-A personal blog built with Docusaurus and integrated with Obsidian for content creation. Automatically deployed to GitHub Pages.
+A personal knowledge base built with Docusaurus and integrated with Obsidian for content creation. Automatically deployed to GitHub Pages.
 
 ## Features
 
@@ -59,11 +59,11 @@ description: "Brief description"
 
 ### GitHub Pages Setup
 
-1. Create a new repository on GitHub named `my-blog`
+1. Create a new repository on GitHub named `lab`
 2. Push this code to the repository
 3. Go to repository Settings > Pages
 4. Set Source to "GitHub Actions"
-5. The site will be available at `https://lipeijia.github.io/my-blog/`
+5. The site will be available at `https://lipeijia.github.io/lab/`
 
 ### Manual Deployment
 
@@ -74,7 +74,7 @@ npm run deploy
 ## Project Structure
 
 ```
-my-blog/
+lab/
 ├── blog/                    # Published blog posts
 ├── docs/                    # Published documentation
 ├── src/                     # React components and pages

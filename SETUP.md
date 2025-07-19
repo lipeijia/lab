@@ -7,7 +7,7 @@ Since GitHub CLI is not available, please follow these steps manually:
 ### 1. Create GitHub Repository
 
 1. Go to [GitHub](https://github.com/new)
-2. Create a new repository named `my-blog`
+2. Create a new repository named `lab`
 3. Make it public (required for GitHub Pages)
 4. Don't initialize with README, .gitignore, or license (we already have these)
 
@@ -16,7 +16,7 @@ Since GitHub CLI is not available, please follow these steps manually:
 Run these commands in your terminal:
 
 ```bash
-git remote add origin https://github.com/lipeijia/my-blog.git
+git remote add origin https://github.com/lipeijia/lab.git
 git push -u origin main
 ```
 
@@ -32,7 +32,7 @@ git push -u origin main
 
 1. Go to the **Actions** tab in your repository
 2. You should see a deployment workflow running
-3. Once complete, your site will be available at: `https://lipeijia.github.io/my-blog/`
+3. Once complete, your site will be available at: `https://lipeijia.github.io/lab/`
 
 ### 5. Set up Obsidian
 
