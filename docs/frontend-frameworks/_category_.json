@@ -1,0 +1,8 @@
+{
+  "label": "前端框架",
+  "position": 4,
+  "link": {
+    "type": "generated-index", 
+    "description": "Vue.js、Angular 等前端框架學習筆記"
+  }
+}
