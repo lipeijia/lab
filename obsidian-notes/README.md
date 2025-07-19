@@ -1,23 +1,46 @@
-# My Blog - Obsidian Notes
+# Obsidian Notes 使用指南
 
-This folder contains your Obsidian vault for writing blog posts and documentation. The content here will be processed and deployed to your Docusaurus blog.
+這個目錄包含了所有用於創建 Docusaurus 內容的 Obsidian 筆記。
 
-## Workflow
-
-1. **Write in Obsidian**: Use this folder as your Obsidian vault to write blog posts and documentation
-2. **Organize content**: 
-   - Put blog posts in `blog/` folder
-   - Put documentation in `docs/` folder
-3. **Sync to Docusaurus**: Copy/move your markdown files to the appropriate Docusaurus folders when ready to publish
-4. **Deploy**: Push changes to GitHub to trigger automatic deployment
-
-## Folder Structure
+## 📁 目錄結構
 
 ```
 obsidian-notes/
-├── blog/           # Blog posts (copy to ../blog/ when ready)
-├── docs/           # Documentation (copy to ../docs/ when ready)
-├── assets/         # Images and other assets
+├── docs/           # 文檔筆記（會同步到 docs/）
+│   ├── javascript/
+│   ├── react/
+│   ├── security/
+│   ├── tools/
+│   ├── performance/
+│   ├── design/
+│   └── frontend-frameworks/
+├── blog/           # 部落格文章（會同步到 blog/）
+└── templates/      # 範本文件
+```
+
+## ✍️ 寫作流程
+
+### 1. 建立新文檔
+- 在對應的分類目錄下創建 `.md` 文件
+- 使用 `templates/docs-template.md` 作為起始範本
+- 確保文件包含正確的 front matter
+
+### 2. 撰寫內容
+- 使用 Markdown 語法
+- 適當使用表情符號增強可讀性
+- 包含程式碼範例和實際案例
+
+### 3. 同步到 Docusaurus
+```bash
+# 同步文檔
+node sync-content.js docs
+
+# 同步部落格
+node sync-content.js blog
+
+# 同步全部
+node sync-content.js all
+```
 └── templates/      # Templates for new posts
 ```
 
