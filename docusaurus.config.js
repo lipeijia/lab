@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Pei Jia\'s WIKI',
+  title: 'Pei Jia\'s Lab',
   tagline: 'Personal knowledge base and learning notes',
   favicon: 'img/favicon.ico',
 
@@ -81,7 +81,7 @@ const config = {
     ({
       // Replace with your project's social card
       navbar: {
-        title: 'Pei Jia\'s WIKI',
+        title: 'Pei Jia\'s Lab',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -138,7 +138,7 @@ const config = {
         //     ],
         //   },
         // ],
-        copyright: `Copyright © ${new Date().getFullYear()} Pei Jia's WIKI. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Pei Jia's Lab. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
