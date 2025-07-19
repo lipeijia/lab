@@ -23,12 +23,12 @@ const config = {
   url: 'https://lipeijia.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/my-blog/',
+  baseUrl: '/lab/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'lipeijia', // Usually your GitHub org/user name.
-  projectName: 'my-blog', // Usually your repo name.
+  projectName: 'lab', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -52,7 +52,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/lipeijia/my-blog/tree/main/',
+            'https://github.com/lipeijia/lab/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -89,7 +89,7 @@ const config = {
         items: [
           {to: '/blog', label: 'Blog', position: 'right'},
           {
-            href: 'https://github.com/lipeijia/my-blog',
+            href: 'https://github.com/lipeijia/lab',
             label: 'GitHub',
             position: 'right',
           },
