@@ -14,11 +14,23 @@ function syncDirectory(src, dest, filePrefix = '') {
     return;
   }
 
+  // Create destination directory if it doesn't exist
+  if (!fs.existsSync(dest)) {
+    fs.mkdirSync(dest, { recursive: true });
+  }
+
   const files = fs.readdirSync(src);
   
   files.forEach(file => {
-    if (file.endsWith('.md')) {
-      const srcPath = path.join(src, file);
+    const srcPath = path.join(src, file);
+    const stat = fs.statSync(srcPath);
+    
+    if (stat.isDirectory()) {
+      // Recursively sync subdirectories
+      const subSrc = srcPath;
+      const subDest = path.join(dest, file);
+      syncDirectory(subSrc, subDest, filePrefix);
+    } else if (file.endsWith('.md')) {
       const destFile = filePrefix ? `${filePrefix}-${file}` : file;
       const destPath = path.join(dest, destFile);
       
