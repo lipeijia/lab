@@ -21,4 +21,4 @@ yarn-error.log*
 
 # Obsidian vault and configuration
 obsidian-notes/
-.obsidian/
+**/.obsidian/
