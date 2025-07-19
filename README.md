@@ -1,4 +1,4 @@
-# Pei Jia's Lab
+# Peja's Lab
 
 A personal knowledge base built with Docusaurus and integrated with Obsidian for content creation. Features selective CI/CD deployment to GitHub Pages.
 
