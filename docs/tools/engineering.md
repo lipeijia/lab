@@ -4,6 +4,12 @@ sidebar_position: 1
 
 # 前端工具與工程化
 
+## 📚 本章內容
+
+- **[工程化實踐](./engineering)**：開發工具和建構流程
+- **[Obsidian 工作流程](./obsidian-docusaurus-workflow)**：內容創作到發布的完整流程
+- **[故障排除](./troubleshooting)**：常見問題診斷與解決
+
 現代前端開發的工具鏈和工程化實踐。
 
 ## 🎯 工程化目標
