@@ -1,13 +1,14 @@
 # Pei Jia's Lab
 
-A personal knowledge base built with Docusaurus and integrated with Obsidian for content creation. Automatically deployed to GitHub Pages.
+A personal knowledge base built with Docusaurus and integrated with Obsidian for content creation. Features selective CI/CD deployment to GitHub Pages.
 
 ## Features
 
 - **Docusaurus** - Modern static site generator
 - **Obsidian Integration** - Write content in Obsidian vault
-- **GitHub Pages** - Automatic deployment
-- **GitHub Actions** - CI/CD pipeline
+- **Selective Deployment** - Deploy only when ready with commit keywords
+- **GitHub Pages** - Automatic deployment when triggered
+- **GitHub Actions** - Smart CI/CD pipeline
 
 ## Quick Start
 
@@ -38,8 +39,8 @@ npm run build
 1. Open the `obsidian-notes/` folder in Obsidian as a vault
 2. Create new blog posts in `obsidian-notes/blog/`
 3. Create documentation in `obsidian-notes/docs/`
-4. When ready to publish, copy files to the main `blog/` or `docs/` folders
-5. Commit and push to GitHub
+4. When ready to publish, sync content using: `node sync-content.js docs`
+5. Commit with deployment keywords to trigger deployment
 
 ### Blog Post Format
 
@@ -56,6 +57,22 @@ description: "Brief description"
 ```
 
 ## Deployment
+
+The site uses **selective deployment** - it won't deploy on every push. See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
+
+### Quick Deploy
+
+```bash
+# Deploy by including keywords in commit message
+git commit -m "feat: new content [deploy]"
+git push
+
+# Or trigger manually via GitHub Actions
+```
+
+**Deployment triggers:**
+- Commit messages containing: `[deploy]`, `[release]`, `[publish]`, `deploy:`, `release:`, `publish:`
+- Manual triggering via GitHub Actions
 
 ### GitHub Pages Setup
 
