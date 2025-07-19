@@ -51,24 +51,24 @@ const config = {
           routeBasePath: '/', // 將 docs 設為根路徑
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/lipeijia/lab/tree/main/',
+        //   editUrl:
+        //     'https://github.com/lipeijia/lab/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/lipeijia/lab/tree/main/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   feedOptions: {
+        //     type: ['rss', 'atom'],
+        //     xslt: true,
+        //   },
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     'https://github.com/lipeijia/lab/tree/main/',
+        //   // Useful options to enforce blogging best practices
+        //   onInlineTags: 'warn',
+        //   onInlineAuthors: 'warn',
+        //   onUntruncatedBlogPosts: 'warn',
+        // },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -86,14 +86,14 @@ const config = {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
-        items: [
-          {to: '/blog', label: 'Blog', position: 'right'},
-          {
-            href: 'https://github.com/lipeijia/lab',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
+        // items: [
+        //   {to: '/blog', label: 'Blog', position: 'right'},
+        //   {
+        //     href: 'https://github.com/lipeijia/lab',
+        //     label: 'GitHub',
+        //     position: 'right',
+        //   },
+        // ],
       },
       footer: {
         style: 'dark',
