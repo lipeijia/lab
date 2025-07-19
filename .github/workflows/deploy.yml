@@ -6,11 +6,54 @@ on:
       - main
   # Allow manual triggering
   workflow_dispatch:
+    inputs:
+      force_deploy:
+        description: '強制部署 (忽略 commit message 檢查)'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
+  # 檢查是否應該部署的工作
+  check-deploy:
+    name: Check Deploy Condition
+    runs-on: ubuntu-latest
+    outputs:
+      should_deploy: ${{ steps.check.outputs.should_deploy }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Check deploy condition
+        id: check
+        run: |
+          # 手動觸發且強制部署
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force_deploy }}" = "true" ]; then
+            echo "should_deploy=true" >> $GITHUB_OUTPUT
+            echo "🚀 手動強制部署"
+            exit 0
+          fi
+          
+          # 檢查最新 commit message 是否包含部署關鍵字
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          echo "Commit message: $COMMIT_MSG"
+          
+          if echo "$COMMIT_MSG" | grep -E '\[deploy\]|\[release\]|\[publish\]|deploy:|release:|publish:' -i; then
+            echo "should_deploy=true" >> $GITHUB_OUTPUT
+            echo "✅ 發現部署關鍵字，將進行部署"
+          else
+            echo "should_deploy=false" >> $GITHUB_OUTPUT
+            echo "⏸️  未發現部署關鍵字，跳過部署"
+            echo "💡 在 commit message 中加入 [deploy], [release], [publish] 或使用手動觸發來部署"
+          fi
+
   build:
     name: Build Docusaurus
     runs-on: ubuntu-latest
+    needs: check-deploy
+    if: needs.check-deploy.outputs.should_deploy == 'true'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
