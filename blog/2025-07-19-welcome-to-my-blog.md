@@ -1,6 +1,6 @@
 ---
 title: "Welcome to My Blog"
-date: 2024-07-16
+date: 2025-07-19
 authors: [lipeijia]
 tags: [welcome, introduction]
 description: "Welcome to my new blog built with Docusaurus and Obsidian"
@@ -38,4 +38,4 @@ Stay tuned for more content!
 
 ---
 
-*Published on July 16, 2024*
+*Published on July 19, 2025*
