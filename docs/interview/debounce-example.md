@@ -1,3 +1,7 @@
+---
+title: "白板題範例：debounce"
+description: "JavaScript debounce 函數的實作與面試技巧"
+---
 
 ``` js
 export default function debounce(func, wait) {
