@@ -19,9 +19,15 @@ function syncDirectory(src, dest, filePrefix = '') {
     fs.mkdirSync(dest, { recursive: true });
   }
 
-  const files = fs.readdirSync(src);
+  // Get all files from source and destination
+  const srcFiles = fs.readdirSync(src);
+  const destFiles = fs.existsSync(dest) ? fs.readdirSync(dest) : [];
   
-  files.forEach(file => {
+  // Track which destination files should exist after sync
+  const expectedDestFiles = new Set();
+  
+  // Process source files
+  srcFiles.forEach(file => {
     const srcPath = path.join(src, file);
     const stat = fs.statSync(srcPath);
     
@@ -29,10 +35,12 @@ function syncDirectory(src, dest, filePrefix = '') {
       // Recursively sync subdirectories
       const subSrc = srcPath;
       const subDest = path.join(dest, file);
+      expectedDestFiles.add(file);
       syncDirectory(subSrc, subDest, filePrefix);
     } else if (file.endsWith('.md')) {
       const destFile = filePrefix ? `${filePrefix}-${file}` : file;
       const destPath = path.join(dest, destFile);
+      expectedDestFiles.add(destFile);
       
       // Read the source file
       const content = fs.readFileSync(srcPath, 'utf8');
@@ -40,6 +48,36 @@ function syncDirectory(src, dest, filePrefix = '') {
       // Write to destination
       fs.writeFileSync(destPath, content);
       console.log(`Synced: ${file} -> ${destFile}`);
+    }
+  });
+  
+  // Remove files from destination that no longer exist in source
+  destFiles.forEach(file => {
+    const destPath = path.join(dest, file);
+    const stat = fs.statSync(destPath);
+    
+    if (stat.isFile() && file.endsWith('.md')) {
+      // Check if this file should still exist
+      let shouldExist = expectedDestFiles.has(file);
+      
+      // For blog files with date prefix, also check without prefix
+      if (!shouldExist && filePrefix) {
+        const withoutPrefix = file.replace(new RegExp(`^${filePrefix.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&')}-`), '');
+        shouldExist = srcFiles.includes(withoutPrefix);
+      }
+      
+      if (!shouldExist) {
+        fs.unlinkSync(destPath);
+        console.log(`Deleted: ${file} (no longer exists in source)`);
+      }
+    } else if (stat.isDirectory() && !expectedDestFiles.has(file)) {
+      // Remove empty directories that no longer exist in source
+      try {
+        fs.rmdirSync(destPath);
+        console.log(`Deleted directory: ${file} (no longer exists in source)`);
+      } catch (err) {
+        // Directory not empty, that's okay
+      }
     }
   });
 }
