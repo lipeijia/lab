@@ -1,3 +1,10 @@
+---
+title: HTTP Security Headers
+description: HTTP 安全標頭（Security Headers）重點整理
+---
+
+
+
 來源：[web.dev: Security Headers](https://web.dev/articles/security-headers)
 
 HTTP 安全標頭（Security Headers）提供一種簡單方式來增強網站的安全性，防止常見攻擊如 XSS、點擊劫持、MIME 偽裝等。
