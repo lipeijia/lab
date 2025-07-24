@@ -33,14 +33,6 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['zh-tw', 'en'],
-  },
-
   presets: [
     [
       'classic',
@@ -48,7 +40,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          routeBasePath: '/', // 將 docs 設為根路徑
+          routeBasePath: '/docs', // 將 docs 掛在 /docs 路徑
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         //   editUrl:
@@ -87,7 +79,12 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+        //   {to: '/about', label: 'About', position: 'right'},
+        //   {to: '/speaking', label: 'Speaking', position: 'right'},
+          {to: '/docs', label: 'Docs', position: 'right'},
           {to: '/blog', label: 'Blog', position: 'right'},
+          {to: '/projects', label: 'Projects', position: 'right'},
+          {to: '/ai-diary', label: 'AI Diary', position: 'right'},
           {
             href: 'https://github.com/lipeijia/lab',
             label: 'GitHub',
