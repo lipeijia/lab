@@ -1,6 +1,7 @@
 ---
 title: 白板題範例：debounce
 description: JavaScript debounce 函數的實作與面試技巧
+sidebar_position: 1
 ---
 
 
