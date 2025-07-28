@@ -10,13 +10,13 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'peja\'s Lab',
+  title: "peja's Lab",
   tagline: 'Personal knowledge base and learning notes',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true // Improve compatibility with the upcoming Docusaurus v4
   },
 
   // Set the production url of your site here
@@ -40,32 +40,31 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          routeBasePath: '/docs', // 將 docs 掛在 /docs 路徑
+          routeBasePath: '/docs' // 將 docs 掛在 /docs 路徑
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/lipeijia/lab/tree/main/',
+          //   editUrl:
+          //     'https://github.com/lipeijia/lab/tree/main/',
         },
         blog: {
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
-            xslt: true,
+            xslt: true
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/lipeijia/lab/tree/main/',
+          editUrl: 'https://github.com/lipeijia/lab/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onUntruncatedBlogPosts: 'warn'
         },
         theme: {
-          customCss: './src/css/custom.css',
-        },
-      }),
-    ],
+          customCss: './src/css/custom.css'
+        }
+      })
+    ]
   ],
 
   themeConfig:
@@ -73,24 +72,24 @@ const config = {
     ({
       // Replace with your project's social card
       navbar: {
-        title: 'peja\'s Lab',
+        title: "peja's Lab",
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.svg'
         },
         items: [
-        //   {to: '/about', label: 'About', position: 'right'},
-        //   {to: '/speaking', label: 'Speaking', position: 'right'},
-          {to: '/docs', label: 'Docs', position: 'right'},
-          {to: '/blog', label: 'Blog', position: 'right'},
-          {to: '/projects', label: 'Projects', position: 'right'},
-          {to: '/ai-diary', label: 'AI Diary', position: 'right'},
+          //   {to: '/about', label: 'About', position: 'right'},
+          //   {to: '/speaking', label: 'Speaking', position: 'right'},
+          { to: '/docs', label: 'Docs', position: 'right' },
+          { to: '/blog', label: 'Blog', position: 'right' },
+          { to: '/projects', label: 'Projects', position: 'right' },
+          { to: '/ai-diary', label: 'AI Diary', position: 'right' },
           {
-            href: 'https://github.com/lipeijia/lab',
+            href: 'https://github.com/lipeijia',
             label: 'GitHub',
-            position: 'right',
-          },
-        ],
+            position: 'right'
+          }
+        ]
       },
       footer: {
         style: 'dark',
@@ -135,13 +134,13 @@ const config = {
         //     ],
         //   },
         // ],
-        copyright: `Copyright © ${new Date().getFullYear()} peja's Lab. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} peja's Lab. Built with Docusaurus.`
       },
       prism: {
         theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
+        darkTheme: prismThemes.dracula
+      }
+    })
 };
 
 export default config;
