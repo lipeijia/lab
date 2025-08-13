@@ -1,5 +1,5 @@
 
-### Depth-first search (DFS)
+## Depth-first search (DFS)
 >Recall that the depth of a node is its distance from the root.
 
  DFS is very similar across all problems. It goes as follows:
@@ -9,8 +9,8 @@
 4. Return the answer
 
 
-![](../../assets/Pasted%20image%2020250811172121.png)
-#### **Preorder traversal**
+![](../../static/img/tree-traversal.png)
+### **Preorder traversal**
 In preorder traversal, logic is done on the current node before moving to the children. Let's say that we wanted to just print the value of each node in the tree to the console. In that case, at any given node, we would print the current node's value, then recursively call the left child, then recursively call the right child.
 
 ```python
@@ -26,7 +26,7 @@ def preorder_dfs(node):
 
 Running the above code on the example tree, we would see the nodes printed in this order: `0, 1, 3, 4, 6, 2, 5`.
 
-#### **Inorder traversal**
+### **Inorder traversal**
 For inorder traversal, we first recursively call the left child, then perform logic (print in this case) on the current node, and then recursively call the right child. This means no logic will be done until we reach a node without a left child since calling on the left child takes priority over performing logic.
 
 ```python
@@ -44,7 +44,7 @@ Running the above code on the example tree, we would see the nodes printed in th
 
 Notice that for any given node, its value is not printed until all values in the left subtree are printed, and values in its right subtree are not printed until after that.
 
-#### **Postorder traversal**
+### **Postorder traversal**
 
 In postorder traversal, we recursively call on the children first and then perform logic on the current node. This means no logic will be done until we reach a leaf node since calling on the children takes priority over performing logic. In a postorder traversal, the root is the last node where logic is done.
 
