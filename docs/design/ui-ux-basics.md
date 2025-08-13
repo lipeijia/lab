@@ -6,6 +6,14 @@ sidebar_position: 1
 
 前端開發者需要具備基本的設計思維，了解使用者體驗設計原則。
 
+## 🔗 學習資源
+
+- [Figma](https://www.figma.com/resource-library/)
+- [Material Design](https://material.io/)
+- [Human Interface Guidelines](https://developer.apple.com/design/)
+- [UX Design 基礎](https://www.interaction-design.org/)
+- [Web 無障礙指南](https://www.w3.org/WAI/WCAG21/quickref/)
+
 ## 🎯 設計目標
 
 - 提升使用者體驗
@@ -155,9 +163,4 @@ sidebar_position: 1
 - **訪談回饋**：深度使用感受
 - **錯誤報告**：問題收集與改進
 
-## 🔗 學習資源
 
-- [Material Design](https://material.io/)
-- [Human Interface Guidelines](https://developer.apple.com/design/)
-- [UX Design 基礎](https://www.interaction-design.org/)
-- [Web 無障礙指南](https://www.w3.org/WAI/WCAG21/quickref/)
